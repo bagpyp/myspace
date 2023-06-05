@@ -1,21 +1,26 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import { Inter } from "next/font/google";
+import NavMenu from "./NavMenu";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Myspace',
-  description: 'Social Networking clone for learning Next 13',
-}
+  title: "Myspace",
+  description: "Social Networking clone for learning Next 13",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavMenu />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
