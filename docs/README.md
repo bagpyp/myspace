@@ -21,6 +21,8 @@ Clone the repo down and fill your .env file
 GITHUB_ID=
 GITHUB_SECRET=
 NEXTAUTH_SECRET=
+DATABASE_URL=
+SHADOW_DATABASE_URL=
 ```
 
 Then, run the development server with
