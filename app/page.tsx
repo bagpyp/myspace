@@ -1,12 +1,12 @@
-import { getServerSession } from 'next-auth';
+// import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 
 export default async function Home() {
-  const session = await getServerSession();
+  // const session = await getServerSession();
+  //
+  // if (!session) {
+  //   redirect('/api/auth/signin');
+  // }
 
-  if (!session) {
-    redirect('/api/auth/signin');
-  }
-
-  return <main></main>;
+  return <main>It's Myspace!</main>;
 }
