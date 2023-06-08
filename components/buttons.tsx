@@ -25,7 +25,7 @@ export function SignInButton() {
     );
   }
 
-  return <button></button>;
+  return <button onClick={() => signIn()}></button>;
 }
 
 export function SignOuButton() {
