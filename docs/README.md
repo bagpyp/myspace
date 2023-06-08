@@ -14,6 +14,11 @@ Once the user is authenticated, their avatar
 from GitHub is used to identify them in the app
 ![authAvatar](authAvatar.png)
 
+By integrating with neonDb (some postgres shit) 
+by way of prisma, we're able to store user session data 
+with a one-liner in a config option
+![sessionToken](sessionToken.png)
+
 ## Contribute
 
 Clone the repo down and fill your .env file
