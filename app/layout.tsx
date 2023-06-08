@@ -1,12 +1,13 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import NavMenu from "./NavMenu";
+import NavMenu from "@/app/NavMenu";
+import AuthProvider from "@/app/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Myspace",
-  description: "Social Networking clone for learning Next 13",
+  description: "Social Networking clone for learning Next.js 13",
 };
 
 export default function RootLayout({
@@ -15,11 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NavMenu />
-        {children}
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <NavMenu />
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
