@@ -1,17 +1,17 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
-import NavMenu from "@/app/NavMenu";
-import AuthProvider from "@/app/AuthProvider";
+import './globals.css';
+import { Inter } from 'next/font/google';
+import NavMenu from '@/app/NavMenu';
+import AuthProvider from '@/app/AuthProvider';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Myspace",
-  description: "Social Networking clone for learning Next.js 13",
+  title: 'Myspace',
+  description: 'Social Networking clone for learning Next.js 13'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
