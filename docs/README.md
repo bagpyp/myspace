@@ -19,16 +19,27 @@ by way of prisma, we're able to store user session data
 with a one-liner in a config option
 ![sessionToken](sessionToken.png)
 
+![sessionToken](sessionToken.png)
+
 ## Contribute
 
-Clone the repo down and fill your .env file
+Clone the repo down and fill your .env file by 
+renaming the `.env.example` file to `.env` and 
+updating env variables
+
 ```
 GITHUB_ID=
 GITHUB_SECRET=
 NEXTAUTH_SECRET=
-DATABASE_URL=
-SHADOW_DATABASE_URL=
+DATABASE_URL=postgres://...
+SHADOW_DATABASE_URL=postgres://...
 ```
+
+I am using a free [NeonDB](https://neon.tech) Postgres
+database, but any Prisma compatible DB will work.
+
+
+
 
 Then, run the development server with
 ```bash
