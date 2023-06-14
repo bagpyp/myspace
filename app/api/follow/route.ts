@@ -15,7 +15,6 @@ export async function POST(req: Request) {
       return user?.id!;
     });
 
-  // @ts-ignore TODO: npx prisma migrate dev when not on plane
   const record = prisma.follows.create({
     data: {
       followerId: currentUserId,
@@ -37,12 +36,11 @@ export async function DELETE(req: NextRequest) {
       return user?.id!;
     });
 
-  // @ts-ignore
   const record = await prisma.follows.delete({
     where: {
       followerId_followingId: {
         followerId: currentUserId,
-        followingId: targetUserId
+        followingId: targetUserId!
       }
     }
   });
